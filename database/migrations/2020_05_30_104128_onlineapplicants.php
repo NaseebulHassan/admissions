@@ -23,8 +23,8 @@ class Onlineapplicants extends Migration
             $table->string('guardian_cnic');
             $table->string('gender');
             $table->string('martial_status');
-            $table->string('domprovince');
-            $table->string('domdistrict');
+            $table->string('domicile_province');
+            $table->string('domicile_district');
             $table->date('date_of_birth');
             $table->string('place_of_birth');
             $table->string('nationality1');
@@ -43,9 +43,15 @@ class Onlineapplicants extends Migration
             $table->string('father_email');
             $table->string('applicant_designation');
             $table->string('organisation_name');
-            $table->string();
-            $table->string();
-            $table->string();
+            $table->string('disability');
+            $table->string('special_arrangement');
+            $table->string('emergency_name');
+            $table->string('relation_applicant');
+            $table->string('em_telephone');
+            $table->string('em_mobile');
+            $table->string('em_address');
+            $table->string('username');
+            $table->string('password');
             $table->timestamps();
         });
     }
