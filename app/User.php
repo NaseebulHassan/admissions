@@ -5,11 +5,33 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Student_Programs;
+use App\Student_Basicinfo;
 
 class User extends Authenticatable
 {
     use Notifiable;
+ 
+  
+    function StudentBasicinfo(){
 
+        return $this->hasMany('App\Student_Basicinfo', 'student_id');
+        
+    }
+
+    function studentprogram(){
+
+        return $this->hasMany('App\Student_Programs', 'student_id' );
+    }
+   
+    function studentacademic(){
+
+        return $this->hasMany('App\Student_Academic','student_id');
+    }
+    function uploaddoc(){
+
+        return $this->hasMany('App\Upload','student_id');
+    }
     /**
      * The attributes that are mass assignable.
      *

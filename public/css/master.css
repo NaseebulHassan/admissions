@@ -1,0 +1,23 @@
+form{
+    border:solid #2D2A83;
+    margin:20px 0px 30px 0px;
+    background-color:#3A698A;
+    color: white;
+    padding:20px;
+  }  
+  input{
+    margin-left:50px;
+  }
+  form h2{
+    background-color:#27297D;
+    width:100%;
+    text-align:center;
+    padding:20px;
+  }
+  form h3{
+      text-align:left;
+  }
+  .buttn{
+    background-color:#27297D;
+    
+  }

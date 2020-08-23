@@ -15,7 +15,7 @@ class Onlineapplicants extends Migration
     {
         Schema::create('onlineapplicants', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('student_name');
             $table->string('student_cnic')->unique();
             $table->string('father_name');
             $table->string('father_cnic');
@@ -29,7 +29,7 @@ class Onlineapplicants extends Migration
             $table->string('place_of_birth');
             $table->string('nationality1');
             $table->string('nationality2');
-            $table->string('present_adress');
+            $table->string('present_address');
             $table->string('present_tel');
             $table->string('present_mobile');
             $table->string('permanent_address');
