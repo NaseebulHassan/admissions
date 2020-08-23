@@ -23,22 +23,26 @@ Route::get('userlogin','UserController@login')->name('userlogin');
 
 /*------Online Application  route-----*/
 
+Route::group(['middleware' => ['auth']], function () {
+    
+    Route::get('/home', 'HomeController@index')->name('home');
+    
+    Route::post('/studentinfo', 'BasicinfoController@StoreBasicinfo')->name('studentinfo');
+    
+    Route::get('/Student_program', 'ProgramsController@StudentProgram')->name('st_program');
+    Route::post('storeprogram', 'ProgramsController@storeprogram')->name('storeprogram');
+    
+    Route::get('Student_academics', 'AcademicController@StudentAcademic')->name('st_academics');
+    
+    Route::post('/formsubmitted', 'AcademicController@StoreRecord')->name('formsubmitted');
+});
 
-Route::post('/studentinfo', 'BasicinfoController@StoreBasicinfo')->name('studentinfo');
-
-Route::get('Student_program', 'ProgramsController@StudentProgram');
-Route::post('storeprogram', 'ProgramsController@storeprogram')->name('storeprogram');
-
-Route::get('Student_academics', 'AcademicController@StudentAcademic');
-
-Route::post('/formsubmitted', 'AcademicController@StoreRecord')->name('formsubmitted');
  
 /* -----------Uploads Document---------*/
 Route::get('upload', 'UploadController@index')->name('upload');
 Route::post('/uploaded', 'UploadController@store')->name('uploaded');
 Auth::routes();
 Route::get('iuic_sic_getdata01', 'HomeController@getdata')->name('getdata');
-Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/startapply/{id}', 'HomeController@index')->name('startapply');
 
 Route::get('/allviewdata/{student_id}', 'HomeController@allviewdata')->name('allviewdata');

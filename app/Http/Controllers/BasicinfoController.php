@@ -8,7 +8,6 @@ use App\Student_Basicinfo;
 use App\User;
 use DataTables;
 
-
 class BasicinfoController extends Controller
 {
     //
@@ -19,31 +18,33 @@ class BasicinfoController extends Controller
 
     public function StoreBasicinfo(Request $request){
     
-      //dd($request);
-        $this->validate($request, [
-             'student_id' => 'required',
-            'student_name' => 'required',
-            'student_cnic' => 'required',
-            'father_name' => 'required',
-            'father_cnic' => 'required',
-            'guardian_name' => 'required',
-            'guardian_cnic' => 'required',
-            'gender' => 'required',
-            'martial_status' => 'required',
-            'domicile_province' => 'required',
-            'domicile_district' => 'required',
-            'date_of_birth' => 'required',
-            'place_of_birth' => 'required',
-            'nationality1' => 'required',
-            'present_address' => 'required',
-            'present_tel' => 'required',
-            'present_mobile' => 'required',
-            'student_email' => 'required|email',
-            'permanent_address'=> 'required',
-                    'perm_tel'=> 'required',
-                'perm_mobile'=> 'required',
-            ]);
-            
+        $validate = Validator::make($request->all(), [
+            'student_id' => 'required',
+           'student_name' => 'required',
+           'student_cnic' => 'required',
+           'father_name' => 'required',
+           'father_cnic' => 'required',
+           'guardian_name' => 'required',
+           'guardian_cnic' => 'required',
+           'gender' => 'required',
+           'martial_status' => 'required',
+           'domicile_province' => 'required',
+           'domicile_district' => 'required',
+           'date_of_birth' => 'required',
+           'place_of_birth' => 'required',
+           'nationality1' => 'required',
+           'present_address' => 'required',
+           'present_tel' => 'required',
+           'present_mobile' => 'required',
+           'student_email' => 'required|email',
+           'permanent_address'=> 'required',
+                   'perm_tel'=> 'required',
+               'perm_mobile'=> 'required',
+           ]);    
+        // $this->validate($request, );
+        if ($validate->fails()) {
+            return redirect()->back()->withErrors($validate)->withInput();
+        } else {
             $basic_info = new Student_Basicinfo;
       
             $basic_info->student_id = $request['student_id'];
@@ -83,6 +84,9 @@ class BasicinfoController extends Controller
             $basic_info->em_address = $request['em_address'];
          
             $basic_info->save();
+            return view('OnlineApply.studentprogram');
+        }
+            
 
             
            
@@ -94,7 +98,6 @@ class BasicinfoController extends Controller
           // else{
           //       return ("Someting went wrong Please try again");
           // }
-          return view('OnlineApply.studentprogram');
     }
 
 }

@@ -8,6 +8,8 @@ use App\User;
 use App\Student_Basicinfo;
 use App\Student_Programs;
 use App\Student_Academic;
+use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -17,7 +19,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth', 'checkSteps']);
     }
 
     /**
@@ -27,6 +29,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $baseInfo = Student_Basicinfo::where('student_id', Auth::user()->id)->first();
+        if ($baseInfo) {
+            return redirect()->route('st_program');
+        } else 
         return view('home');
     } 
 

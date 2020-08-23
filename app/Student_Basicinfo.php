@@ -3,19 +3,22 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
-use App\Student_Programs;
+use Illuminate\Support\Facades\Auth;
+
 class Student_Basicinfo extends Model
 {
     //
-    public function program1(){
-        return $this->belongsTo('\App\User','id');
+    public function program1()
+    {
+        return $this->belongsTo('\App\User', 'id');
     }
-    public function programs(){
-        return $this->hasMany('\App\Student_Programs','student_id');
+    public function programs()
+    {
+        return $this->hasMany('\App\Student_Programs', 'student_id', 'student_id');
     }
-    public function academics(){
-        return $this->hasMany('\App\Student_Academic','student_id');
+    public function academics()
+    {
+        return $this->hasMany('\App\Student_Academic', 'student_id', 'student_id');
     }
 
     protected $fillable = [
@@ -40,6 +43,7 @@ class Student_Basicinfo extends Model
         'perm_tel',
         'perm_mobile',
         'student_email',
-     
-];
+
+    ];
+
 }
