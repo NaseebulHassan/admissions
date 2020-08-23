@@ -30,7 +30,7 @@
                     <div class="col-md-12">
                         <div class="col-md-6 home-left2">
                              <img src="images/Banner.png" alt="" height="500" width="500"  >
-                              
+                                 
                         </div>
                         <div class="col-md-6 home-right2">
                           <a href="startapply/{{Auth::user()->id}}"><img src="images/Apply.png" alt="" height="150" width="500"  ></a> 
