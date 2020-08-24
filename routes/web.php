@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/Student_program', 'ProgramsController@StudentProgram')->name('st_program');
     Route::post('storeprogram', 'ProgramsController@storeprogram')->name('storeprogram');
     
-    Route::get('Student_academics', 'AcademicController@StudentAcademic')->name('st_academics');
+    Route::get('/Student_academics', 'AcademicController@StudentAcademic')->name('st_academics');
     
     Route::post('/formsubmitted', 'AcademicController@StoreRecord')->name('formsubmitted');
 });
