@@ -3,6 +3,8 @@
 namespace App\Http\Middleware;
 
 use App\Student_Basicinfo;
+use App\Student_Programs;
+use App\Student_Academics;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 

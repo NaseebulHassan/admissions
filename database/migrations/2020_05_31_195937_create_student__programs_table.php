@@ -26,7 +26,7 @@ class CreateStudentProgramsTable extends Migration
             $table->string('program')->nullable();
             $table->string('tr_reason_leaving')->nullable();
             $table->string('awaiting_result')->nullable();
-            $table->date('board_university')->nullable();
+            $table->string('board_university')->nullable();
             $table->string('roll_number')->nullable();
             $table->string('year')->nullable();
             $table->string('disciplinary_issue')->nullable();
