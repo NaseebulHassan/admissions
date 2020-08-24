@@ -35,6 +35,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/Student_academics', 'AcademicController@StudentAcademic')->name('st_academics');
     
     Route::post('/formsubmitted', 'AcademicController@StoreRecord')->name('formsubmitted');
+    Route::get('/Applied', 'AcademicController@Complete')->name('Applied');
 });
 
  

@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Student_Programs;
 use App\Student_Basicinfo;
+use App\Student_Academic;
 
 class User extends Authenticatable
 {
@@ -15,19 +16,19 @@ class User extends Authenticatable
   
     function StudentBasicinfo(){
 
-        return $this->hasMany('App\Student_Basicinfo', 'student_id');
+        return $this->hasMany('App\Student_Basicinfo', 'student_id', 'id');
         
     }
 
-    function studentprogram(){
-
-        return $this->hasMany('App\Student_Programs', 'student_id' );
+    public function programs()
+    {
+        return $this->hasMany('\App\Student_Programs', 'student_id', 'id');
     }
-   
-    function studentacademic(){
-
-        return $this->hasMany('App\Student_Academic','student_id');
+    public function academics()
+    {
+        return $this->hasMany('\App\Student_Academic', 'student_id', 'id');
     }
+
     function uploaddoc(){
 
         return $this->hasMany('App\Upload','student_id');

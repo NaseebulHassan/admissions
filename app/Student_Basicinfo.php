@@ -4,7 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
-
+use App\Student_Programs;
+use App\Student_Basicinfo;
+use App\Student_Academic;
 class Student_Basicinfo extends Model
 {
     //

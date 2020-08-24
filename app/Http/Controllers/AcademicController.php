@@ -14,7 +14,9 @@ class AcademicController extends Controller
         $users=User::all();
         return view('OnlineApply.academic',compact('users'));
     }
-
+    public function Complete(){
+        return view('OnlineApply.viewdata');
+    }
     public function StoreRecord(Request $request)
     {
 
