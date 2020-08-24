@@ -17,10 +17,10 @@ class AcademicController extends Controller
     public function Complete(){
         return view('OnlineApply.viewdata');
     }
+
+
     public function StoreRecord(Request $request)
     {
-
-           
 
         $student=$request->row[0]['student_id'];
         $rows =$request->input('row');
