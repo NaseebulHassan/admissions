@@ -23,6 +23,8 @@ class CheckSteps
                 return redirect()->route('st_program');
             } else if ($baseInfo->academics()->count() == 0) {
                 return redirect()->route('st_academics');
+            }else {
+                return redirect()->route('Applied');
             }
             
         }
