@@ -17,7 +17,7 @@ class CheckSteps
      */
     public function handle($request, Closure $next)
     {
-        $baseInfo = Student_Basicinfo::where('student_id', Auth::user()->id)->first();
+        $baseInfo = Student_Basicinfo::where('formno', Auth::user()->id)->first();
         if ($baseInfo) {
             if ($baseInfo->programs()->count() == 0) {
                 return redirect()->route('st_program');

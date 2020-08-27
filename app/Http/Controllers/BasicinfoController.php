@@ -47,7 +47,7 @@ class BasicinfoController extends Controller
         } else {
             $basic_info = new Student_Basicinfo;
       
-            $basic_info->student_id = $request['student_id'];
+            $basic_info->formno = $request['student_id'];
             $basic_info->student_name = $request['student_name'];
             $basic_info->student_cnic = $request['student_cnic'];
             $basic_info->father_name = $request['father_name'];
@@ -84,7 +84,7 @@ class BasicinfoController extends Controller
             $basic_info->em_address = $request['em_address'];
          
             $basic_info->save();
-            return view('OnlineApply.studentprogram');
+            return redirect()->route('st_program');
         }
             
 

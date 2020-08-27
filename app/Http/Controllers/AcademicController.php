@@ -29,7 +29,7 @@ class AcademicController extends Controller
               if(!empty($row['qualification']))
               {
                 $records []=array(
-                    'student_id'=>$student,
+                    'formno'=>$student,
                     'qualification'=>$row['qualification'],
                     'board_university'=>$row['board_university'],
                     'year'=>$row['year'],

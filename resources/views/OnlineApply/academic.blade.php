@@ -254,7 +254,7 @@
         <hr>
              <div class="row">
                 <div class="col-md-12 btn">
-                  <input type="submit" value="Save"  class="form-control buttn" style="background-color:#555555;color:white;">
+                  <input type="submit" value="Save"  class="form-control buttn btn-success" >
                 </div>
              </div>
       </form>

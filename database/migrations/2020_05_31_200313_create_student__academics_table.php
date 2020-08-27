@@ -15,7 +15,7 @@ class CreateStudentAcademicsTable extends Migration
     {
         Schema::create('student__academics', function (Blueprint $table) {
             $table->id();
-            $table->integer('student_id');
+            $table->integer('formno');
             $table->string('qualification')->nullable();
             $table->string('board_university')->nullable();
             $table->string('year')->nullable();

@@ -15,7 +15,7 @@ class CreateStudentBasicinfosTable extends Migration
     {
         Schema::create('student__basicinfos', function (Blueprint $table) {
             $table->id();
-            $table->integer('student_id');
+            $table->integer('formno');
             $table->string('student_name');
             $table->string('student_cnic')->unique();
             $table->string('father_name');

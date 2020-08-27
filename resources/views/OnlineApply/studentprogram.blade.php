@@ -217,31 +217,52 @@
         </div>
         
         <div class="col-md-12">
+          @foreach($semesters as $semester)
+            <input type="hidden" name="semester" class="hidden" value="{{$semester->session}}"> 
+          @endforeach
                 <h4 style="background-color:#27297D;padding:5px">Select [ at least one ] Program in which you want to apply. **Student can apply for 3 different Programs** </h4>
                 Program 1.
                 <select name="program1" id="select4" class="col-md-6" style="padding:10px" required>
-                @include("OnlineApply.programs")
+                <option value="">N/A</option>
+                    @foreach($programs as $program)
+
+                      <option value="{{$program->id}}">{{$program->name}}</option>
+                            
+                    
+                    @endforeach
                 </select>
         </div>
         <div class="col-md-12">
                
                 Program 2.
-                <select name="program2" id="select4"  class="col-md-6" style="padding:10px" required>
-                @include("OnlineApply.programs")
+                <select name="program2" id="select4"  class="col-md-6" style="padding:10px" >
+                <option value="">N/A</option>
+                    @foreach($programs as $program)
+
+                      <option value="{{$program->id}}">{{$program->name}}</option>
+                            
+
+                      @endforeach
                 </select>
         </div>
         <div class="col-md-12">
                 
                 Program 3.
                 <select name="program3" id="select4" class="col-md-6" style="padding:10px">
-                @include("OnlineApply.programs")
+                <option value="">N/A</option>
+                    @foreach($programs as $program)
+
+                          <option value="{{$program->id}}">{{$program->name}}</option>
+
+
+                      @endforeach
                 </select>
         </div>
       </div>
 <hr>
              <div class="row">
                 <div class="col-md-12 btn">
-                  <input type="submit" value="Save"  class="form-control buttn" style="background-color:#555555;color:white;">
+                  <input type="submit" value="Save" class="form-control buttn btn-success" >
                 </div>
              </div>
       </form>

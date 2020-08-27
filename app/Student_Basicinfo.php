@@ -16,15 +16,15 @@ class Student_Basicinfo extends Model
     }
     public function programs()
     {
-        return $this->hasMany('\App\Student_Programs', 'student_id', 'student_id');
+        return $this->hasMany('\App\Student_Programs', 'formno', 'formno');
     }
     public function academics()
     {
-        return $this->hasMany('\App\Student_Academic', 'student_id', 'student_id');
+        return $this->hasMany('\App\Student_Academic', 'formno', 'formno');
     }
 
     protected $fillable = [
-        'student_id',
+        'formno',
         'student_name',
         'student_cnic',
         'father_name',

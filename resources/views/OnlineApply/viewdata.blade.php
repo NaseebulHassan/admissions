@@ -25,13 +25,23 @@
 <!-------- Login Model Form------>
             <div class="col-md-12">
          
-                        <div class="col-md-12 home-left">
-                                    <h3>Dear Applicant your form successfully submitted.</h3>
-                                    <h3>You will be notify soon for Admission Confirmation</h3>
+                            <div class="col-md-12 home-left">
+                                    <h3>Congratulations You have successfully Applied</h3>
+                                    <h3>If any query regarding admissions Please Contact at <br>
+                                       Email:  admissions@iqraisb.edu.pk
+                                     </h3>
+
+                                        
+                                           
+                                    
+                                      <h2> <a href="{{route('getvoucher',['Auth::user()->id']}}">Print Processing Fee Voucher</a> </h2>
+                                  
                             </div>
                         
             
-
+                            
+                                
+                         
 
 
                   

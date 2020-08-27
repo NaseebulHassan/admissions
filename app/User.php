@@ -16,22 +16,22 @@ class User extends Authenticatable
   
     function StudentBasicinfo(){
 
-        return $this->hasMany('App\Student_Basicinfo', 'student_id', 'id');
+        return $this->hasMany('App\Student_Basicinfo', 'formno', 'id');
         
     }
 
     public function programs()
     {
-        return $this->hasMany('\App\Student_Programs', 'student_id', 'id');
+        return $this->hasMany('\App\Student_Programs', 'formno', 'id');
     }
     public function academics()
     {
-        return $this->hasMany('\App\Student_Academic', 'student_id', 'id');
+        return $this->hasMany('\App\Student_Academic', 'formno', 'id');
     }
 
     function uploaddoc(){
 
-        return $this->hasMany('App\Upload','student_id');
+        return $this->hasMany('App\Upload','formno');
     }
     /**
      * The attributes that are mass assignable.

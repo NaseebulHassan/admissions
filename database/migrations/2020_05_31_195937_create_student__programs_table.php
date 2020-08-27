@@ -15,7 +15,7 @@ class CreateStudentProgramsTable extends Migration
     {
         Schema::create('student__programs', function (Blueprint $table) {
             $table->id();
-            $table->integer('student_id');
+            $table->integer('formno');
             $table->string('campus')->nullable();
             $table->string('registration_no')->nullable();
             $table->string('pre_program')->nullable();
@@ -33,6 +33,7 @@ class CreateStudentProgramsTable extends Migration
             $table->string('disciplinary_details')->nullable();
             $table->string('how_did_come')->nullable();
             $table->string('student_status');
+            $table->string('semester');
             $table->string('program1');
             $table->string('program2')->nullable();
             $table->string('program3')->nullable();

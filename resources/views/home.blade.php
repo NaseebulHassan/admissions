@@ -63,19 +63,19 @@
                     
                         <div class="col-md-6">
                           <label for="" style="text-align:left;">Name (*)</label>
-                          <input type="text" class="form-control" name="student_name" placeholder="Enter Name" value="{{ old('student_name')?old('student_name'): '' }}"><br>
+                          <input type="text" class="form-control" name="student_name" placeholder="Enter Name" value="{{ old('student_name')?old('student_name'): '' }}" required><br>
                           <label for="">Father Name (*)</label>
-                          <input type="text" class="form-control" name="father_name" placeholder="Enter Father Name"  value="{{ old('father_name')?old('father_name'): '' }}"><br>
+                          <input type="text" class="form-control" name="father_name" placeholder="Enter Father Name"  value="{{ old('father_name')?old('father_name'): '' }}" required><br>
                           <label for="">Guardian's Name (*)</label>
-                          <input type="text" class="form-control" name="guardian_name" placeholder="Enter Guardian Name"  value="{{ old('guardian_name')?old('guardian_name'): '' }}"><br>
+                          <input type="text" class="form-control" name="guardian_name" placeholder="Enter Guardian Name"  value="{{ old('guardian_name')?old('guardian_name'): '' }}" required><br>
                         </div>
                         <div class="col-md-6">
                           <label for="">Student's CNIC (*)</label>
-                          <input type="text" class="form-control" name="student_cnic" id="cnic" maxlength="15" placeholder="Enter student's CNIC" value="{{ old('student_cnic')?old('student_cnic'): '' }}" ><br>
+                          <input type="text" class="form-control" name="student_cnic" id="cnic" maxlength="15" placeholder="Enter student's CNIC" value="{{ old('student_cnic')?old('student_cnic'): '' }}" required ><br>
                           <label for="">Father's CNIC (*)</label>
-                          <input type="text" class="form-control" name="father_cnic"  id="father_cnic" maxlength="15" placeholder="Enter Father CNIC"  value="{{ old('father_cnic')?old('father_cnic'): '' }}"><br>
+                          <input type="text" class="form-control" name="father_cnic"  id="father_cnic" maxlength="15" placeholder="Enter Father CNIC"  value="{{ old('father_cnic')?old('father_cnic'): '' }}" required><br>
                           <label for="">Guardian's CNIC (*)</label>
-                          <input type="text" class="form-control" name="guardian_cnic" id="guardian_cnic" maxlength="15" placeholder="Enter Guardian CNIC"  value="{{ old('guardian_cnic')?old('guardian_cnic'): '' }}"><br>
+                          <input type="text" class="form-control" name="guardian_cnic" id="guardian_cnic" maxlength="15" placeholder="Enter Guardian CNIC"  value="{{ old('guardian_cnic')?old('guardian_cnic'): '' }}" required><br>
                         </div>
                     </div>
                     <!-------Personal Information End------>
@@ -87,8 +87,8 @@
                         
                           <div class="col-md-4">
                             <label for="">Gender: (*)</label>
-                            <select name="gender" id="mstatus" class="form-control col-md-12">
-                                <option value="Male"  selected="{{ old('mstatus') ??old('mstatus')=='Male'?'selected': '' }}">Male</option>
+                            <select name="gender" id="mstatus" class="form-control col-md-12" required>
+                                <option value="Male"  selected="{{ old('mstatus') ??old('mstatus')=='Male'?'selected': '' }}" >Male</option>
                                 <option value="Female"  {{ old('mstatus') ??old('mstatus')=='Female'?'selected': '' }}">Female</option>
                             </select>
                           </div>
@@ -96,7 +96,7 @@
                             <div class="col-md-4">
                               
                               <label for="">Martial Status (*)</label>
-                              <select name="martial_status" id="mstatus" class="form-control col-md-12">
+                              <select name="martial_status" id="mstatus" class="form-control col-md-12" required>
                                 <option value="single">Single</option>
                                 <option value="married">Married</option>
                               </select>
@@ -113,12 +113,21 @@
                         
                         <div class="col-md-6">
                           <label for="">Province (*)</label>
-                          <input type="text" class="form-control" name="domicile_province" placeholder="Enter Province"   value="{{ old('domicile_province')?old('domicile_province'): '' }}"><br>
+                          <select name="domicile_province" id="mstatus" class="form-control col-md-6" required>
+                                <option value="">Select Province</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Sindh">Sindh</option>
+                                <option value="Balochistan">Balochistan</option>
+                                <option value="KPK">KPK</option>
+                                <option value="Gilgit">Gilgit Baltistan</option>
+                                <option value="AJ&K">Azad Jammu & Kashmir</option>
+                              </select>
+                         <br>
                         
                         </div>
                         <div class="col-md-6">
                           <label for="">District (*)</label>
-                          <input type="text" class="form-control" name="domicile_district" placeholder="Enter District"   value="{{ old('domicile_district')?old('domicile_district'): '' }}"><br>
+                          <input type="text" class="form-control col-md-6" name="domicile_district" placeholder="Enter District"   value="{{ old('domicile_district')?old('domicile_district'): '' }}" required><br>
                         
                         </div>
                     </div>
@@ -130,17 +139,17 @@
                         
                         <div class="col-md-3">
                           <label for=""> Date of Birth (*)</label>
-                          <input type="date" class="form-control" name="date_of_birth" placeholder="Enter Date of Birth" value="{{ old('date_of_birth')?old('date_of_birth'): '' }}"><br>
+                          <input type="date" class="form-control" name="date_of_birth" placeholder="Enter Date of Birth" value="{{ old('date_of_birth')?old('date_of_birth'): '' }}" required><br>
                         
                         </div>
                         <div class="col-md-3">
                           <label for=""> Place of Birth (*)</label>
-                          <input type="text" class="form-control" name="place_of_birth" placeholder="Enter Place of Birth" value="{{ old('place_of_birth')?old('place_of_birth'): '' }}"><br>
+                          <input type="text" class="form-control" name="place_of_birth" placeholder="Enter Place of Birth" value="{{ old('place_of_birth')?old('place_of_birth'): '' }}" required><br>
                         
                         </div>
                         <div class="col-md-3">
                           <label for="">Nationality1 (*)</label>
-                          <input type="text" class="form-control" name="nationality1" placeholder="Enter Nationality1" value="{{ old('nationality1')?old('nationality1'): '' }}"><br>
+                          <input type="text" class="form-control" name="nationality1" placeholder="Enter Nationality1" value="{{ old('nationality1')?old('nationality1'): '' }}" required><br>
                         
                         </div>
                         <div class="col-md-3">
@@ -159,7 +168,7 @@
                     <div class="row "><br>
                         
                         <div class="col-md-12">
-                          <textarea name="present_address" id="present_address" cols="119" rows="2" class="col-md-12" > {{ old('present_address')?old('present_address'): '' }}</textarea>
+                          <textarea name="present_address" id="present_address" cols="119" rows="2" class="col-md-12" required > {{ old('present_address')?old('present_address'): '' }}</textarea>
                         </div>
                     </div>
                     <!-------Current Address Information End------>
@@ -171,12 +180,12 @@
                         
                         <div class="col-md-6">
                           <label for="">Tel (Res) (*) </label>
-                          <input type="text" class="form-control" name="present_tel" id="present_tel" maxlength="12" placeholder="Enter Residentialial Telephone " value="{{ old('present_tel')?old('present_tel'): '' }}"><br>
+                          <input type="text" class="form-control" name="present_tel" id="present_tel" maxlength="11" placeholder="Enter Residentialial Telephone " value="{{ old('present_tel')?old('present_tel'): '' }}" required><br>
                         
                         </div>
                         <div class="col-md-6">
                           <label for="">Mobile Phone (*)</label>
-                          <input type="text" class="form-control" name="present_mobile" id="present_mobile" maxlength="12" placeholder="Enter Mobile Phone" value="{{ old('present_mobile')?old('present_mobile'): '' }}" ><br>
+                          <input type="text" class="form-control" name="present_mobile" id="present_mobile" maxlength="12" placeholder="Enter Mobile Phone" value="{{ old('present_mobile')?old('present_mobile'): '' }}"  required><br>
                         
                         </div>
                     </div>
@@ -187,7 +196,10 @@
                       
             <!-------Permanant Address Information start------>
             <div class="col-md-12">
-                      <h3>Permanant Address of Applicant :(*)</h3>
+            <input type="checkbox" name="paramtoo" onclick="FillParam(this.form)">
+                        <em>Check this box if Present Address and Permanent Address are the same.</em>
+                      <h3>Permanent Address of Applicant :(*)</h3>
+
                     </div>
                     <div class="row "><br>
                         
@@ -206,7 +218,7 @@
                         
                         <div class="col-md-6">
                           <label for="">Tel (Res)  </label>
-                          <input type="text" class="form-control" name="perm_tel" id="perm_tel"  maxlength="12"  placeholder="Enter Residentialial Telephone "  value="{{ old('perm_tel')?old('perm_tel'): '' }}" ><br>
+                          <input type="text" class="form-control" name="perm_tel" id="perm_tel"  maxlength="11"  placeholder="Enter Residentialial Telephone "  value="{{ old('perm_tel')?old('perm_tel'): '' }}" ><br>
                         
                         </div>
                         <div class="col-md-6">
@@ -220,7 +232,7 @@
 
                       <div class="row">
                           <div class="col-md-6">
-                            <label for="">{{Auth::user()->email}}</label>
+                            <label for="">Student Email: {{Auth::user()->email}}</label>
                             <input type="hidden" name="student_email" id="" value="{{Auth::user()->email}}" class="form-control" placeholder="Enter Email">
                           </div>
                       </div>
@@ -249,12 +261,12 @@
                         
                         <div class="col-md-4">
                           <label for="">Tel (Res) </label>
-                          <input type="text" class="form-control" name="father_tel" placeholder="Enter Residentialial Telephone " maxlength="12"  value="{{ old('father_tel')?old('father_tel'): '' }}" ><br>
+                          <input type="text" class="form-control" name="father_tel" id="father_tel" placeholder="Enter Residentialial Telephone " maxlength="11"  value="{{ old('father_tel')?old('father_tel'): '' }}" ><br>
                         
                         </div>
                         <div class="col-md-4">
                           <label for="">Mobile Phone </label>
-                          <input type="text" class="form-control" name="father_mobile" placeholder="Enter Mobile Phone"  maxlength="12"  value="{{ old('father_mobile')?old('father_mobile'): '' }}"><br>
+                          <input type="text" class="form-control" name="father_mobile" id="father_mobile" placeholder="Enter Mobile Phone"  maxlength="12"  value="{{ old('father_mobile')?old('father_mobile'): '' }}"><br>
                         
                         </div>
                         <div class="col-md-4">
@@ -312,15 +324,15 @@
                         <div class="col-md-6">
                           <label for="" style="text-align:left;">Name</label>
                           <input type="text" class="form-control" name="emergency_name" placeholder="Enter Name" value="{{ old('emergency_name')?old('emergency_name'): '' }}"><br>
-                          <label for="">Telephone No(s)</label>
-                          <input type="text" class="form-control" name="em_telephone" placeholder="Enter Telephone No"  maxlength="12"value="{{ old('em_telephone')?old('em_telephone'): '' }}"><br>
+                          <label for="">Telephone No:</label>
+                          <input type="text" class="form-control" name="em_telephone" id="em_telephone" placeholder="Enter Telephone No"  maxlength="11" value="{{ old('em_telephone')?old('em_telephone'): '' }}"><br>
                           
                         </div>
                         <div class="col-md-6">
                           <label for="">Relationship with the Applicant</label>
                           <input type="text" class="form-control" name="relation_applicant" placeholder="Enter Relationship with the Applicant" value="{{ old('relation_applicant')?old('relation_applicant'): '' }}"><br>
-                          <label for="">Mobile No</label>
-                          <input type="text" class="form-control" name="em_mobile" placeholder="Enter Mobile No" maxlength="12" value="{{ old('em_mobile')?old('em_mobile'): '' }}"><br>
+                          <label for="">Mobile No:</label>
+                          <input type="text" class="form-control" name="em_mobile" id="em_mobile" placeholder="Enter Mobile No" maxlength="12" value="{{ old('em_mobile')?old('em_mobile'): '' }}"><br>
                           
                         </div>
                     </div>
@@ -339,7 +351,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-md-12 btn">
-                              <input type="submit" value="Save" Onclick="personal_info(event)" class="form-control buttn" style="background-color:#555555;color:white;">
+                              <input type="submit" value="Save" Onclick="personal_info(event)" class="form-control buttn btn-success" >
                             </div>
                         </div>
                 </form>
@@ -360,8 +372,19 @@
       <script src="js/bootstrap.js" type="text/javascript"></script>
       <script src="{{asset('js/basicinfo.js')}}" type="text/javascript"></script>
 
+        <script>
+            function FillParam(f) {
+              if(f.paramtoo.checked == true) {
+                f.permanent_address.value = f.present_address.value;
+                f.perm_tel.value = f.present_tel.value;
+                f.perm_mobile.value = f.present_mobile.value;
 
-      </script>
+                
+              }
+            }
+        </script>
+
+
       <script src="js/script.js"></script>
   </body>
 </html>

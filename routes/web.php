@@ -26,6 +26,7 @@ Route::get('userlogin','UserController@login')->name('userlogin');
 Route::group(['middleware' => ['auth']], function () {
     
     Route::get('/home', 'HomeController@index')->name('home');
+
     
     Route::post('/studentinfo', 'BasicinfoController@StoreBasicinfo')->name('studentinfo');
     
@@ -36,9 +37,12 @@ Route::group(['middleware' => ['auth']], function () {
     
     Route::post('/formsubmitted', 'AcademicController@StoreRecord')->name('formsubmitted');
     Route::get('/Applied', 'AcademicController@Complete')->name('Applied');
+
+    Route::get('/getvoucher/{id}', 'HomeController@Voucher')->name('getvoucher');
 });
 
- 
+
+Route::get('/clear/route', 'ConfigController@clearRoute');
 /* -----------Uploads Document---------*/
 Route::get('upload', 'UploadController@index')->name('upload');
 Route::post('/uploaded', 'UploadController@store')->name('uploaded');

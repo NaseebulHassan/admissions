@@ -40,7 +40,7 @@
             <div class="row">
             
             <div class="col-md-12">
-            <strong>Form No</strong>    : &nbsp;{{$basicinfos->student_id}}
+            <strong>Form No</strong>    : &nbsp;{{$basicinfos->formno}}
                  </div>
                   
                    

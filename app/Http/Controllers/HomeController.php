@@ -29,53 +29,33 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $baseInfo = Student_Basicinfo::where('student_id', Auth::user()->id)->first();
+        $baseInfo = Student_Basicinfo::where('formno', Auth::user()->id)->first();
         if ($baseInfo) {
             return redirect()->route('st_program');
         } else 
         return view('home');
     } 
 
-    public function startApply($id){
+    public function Voucher(Request $request, $id){
 
-        if($id){
+       
            
-            $basicinfos=Student_Basicinfo::where('student_id','=',$id)->first();
-            $programs=Student_Programs::where('student_id','=',$id)->first();
-            $academics=Student_Academic::where('student_id','=',$id)->first();
-            return view('OnlineApply.viewdata');
-        }
-        elseif($id){
-            $basicinfos=Student_Basicinfo::whereNull('student_id','=',$id);
-            $programs=Student_Programs::whereNull('student_id','=',$id);
-            $academics=Student_Academic::whereNull('student_id','=',$id);
-            return view('home1');
-        }
-        elseif($id){
-            $basicinfos=Student_Basicinfo::where('student_id','=',$id)->first();
-            $programs=Student_Programs::whereNull('student_id','=',$id);
-            $academics=Student_Academic::whereNull('student_id','=',$id);
-            return view('OnlineApply.studentprogram');
-        }
-        elseif($id){
-            $basicinfos=Student_Basicinfo::where('student_id','=',$id)->first();
-            $programs=Student_Programs::where('student_id','=',$id)->first();
-            $academics=Student_Academic::whereNull('student_id','=',$id);
-            return view('OnlineApply.academic');
-        }
-        else{
-            return view('OnlineApply.viewdata');
-        }
-
+            $basicinfos=Student_Basicinfo::where('formno','=',$id)->first();
+           $programs=Student_Programs::where('formno','=',$id)->first();
+           $academics=Student_Academic::where('formno','=',$id)->first();   
+            return view('feevoucher',compact('basicinfos','programs','academics'));
+            
+        
+       
     }
 
 
     public function getdata()
     {
   
-       $users=User::join('Student__Basicinfos','Student__Basicinfos.student_id','=','users.id')
-       ->join('Student__Programs','Student__Programs.student_id','=','users.id')
-      ->orderBy('Student__Basicinfos.student_id','DESC')
+       $users=User::join('Student__Basicinfos','Student__Basicinfos.formno','=','users.id')
+       ->join('Student__Programs','Student__Programs.formno','=','users.id')
+      ->orderBy('Student__Basicinfos.formno','DESC')
        ->paginate(2);
         return view('alldata',compact('users'));
     } 
@@ -85,9 +65,9 @@ class HomeController extends Controller
           
         
        
-        $basicinfos=Student_Basicinfo::where('student_id','=',$student_id)->first();
-        $programs=Student_Programs::where('student_id','=',$student_id)->first();;
-        $academics=Student_Academic::where('student_id','=',$student_id)->get();;
+        $basicinfos=Student_Basicinfo::where('formno','=',$student_id)->first();
+        $programs=Student_Programs::where('formno','=',$student_id)->first();;
+        $academics=Student_Academic::where('formno','=',$student_id)->get();;
          return view('viewstudata',compact('basicinfos','programs','academics'));
       
        
