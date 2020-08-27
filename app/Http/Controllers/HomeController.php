@@ -46,9 +46,9 @@ class HomeController extends Controller
                 $basic_info->save();
 
            
-             /*   $basicinfos=Student_Basicinfo::where('formno','=',$formno)->first();
+              $basicinfos=Student_Basicinfo::where('formno','=',$formno)->first();
                 $programs=Student_Programs::where('formno','=',$formno)->first();
-                $academics=Student_Academic::where('formno','=',$formno)->first();  */ 
+                $academics=Student_Academic::where('formno','=',$formno)->first();  
                  return view('feevoucher');
             
         
