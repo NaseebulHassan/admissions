@@ -53,7 +53,7 @@ class AcademicController extends Controller
         Student_Academic::insert($records);
           
             
-        return redirect()->route('applied');
+        return redirect()->route('Applied');
     
     }
 }

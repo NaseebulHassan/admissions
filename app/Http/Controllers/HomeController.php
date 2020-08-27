@@ -37,7 +37,7 @@ class HomeController extends Controller
         return view('home');
     } 
 
-    public function Voucher( Request $request){
+    public function FeeVoucher(Request $request){
 
                     dd($rquest);
                 $voucher = new Voucher;
