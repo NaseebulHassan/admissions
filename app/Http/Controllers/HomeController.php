@@ -37,23 +37,6 @@ class HomeController extends Controller
         return view('home');
     } 
 
-    public function FeeVoucher(Request $request){
-
-                    dd($rquest);
-                $voucher = new Voucher;
-            
-                $voucher->formno = $request['formno'];
-                $basic_info->save();
-
-           
-              $basicinfos=Student_Basicinfo::where('formno','=',$formno)->first();
-                $programs=Student_Programs::where('formno','=',$formno)->first();
-                $academics=Student_Academic::where('formno','=',$formno)->first();  
-                 return view('feevoucher');
-            
-        
-       
-    }
 
 
     public function getdata()

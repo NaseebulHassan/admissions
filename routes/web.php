@@ -38,7 +38,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/formsubmitted', 'AcademicController@StoreRecord')->name('formsubmitted');
     Route::get('/Applied', 'AcademicController@Complete')->name('Applied');
 
-    Route::get('voucher', 'HomeController@Voucher')->name('voucher');
+    Route::get('/voucherUP', 'UserController@Voucher')->name('voucher');
 });
 
 
