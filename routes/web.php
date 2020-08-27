@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 /*------Login page route-----*/
 
-Route::get('userlogin','UserController@login')->name('userlogin');
+//Route::get('userlogin','UserController@login')->name('userlogin');
 
 /*------Online Application  route-----*/
 
@@ -36,9 +36,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/Student_academics', 'AcademicController@StudentAcademic')->name('st_academics');
     
     Route::post('/formsubmitted', 'AcademicController@StoreRecord')->name('formsubmitted');
-    Route::get('/Applied', 'AcademicController@Complete')->name('Applied');
+    
+    Route::get('/applied', 'AcademicController@Complete')->name('applied');
 
-    Route::get('/getvoucher/{id}', 'HomeController@Voucher')->name('getvoucher');
+    Route::post('voucher', 'HomeController@Voucher');
 });
 
 

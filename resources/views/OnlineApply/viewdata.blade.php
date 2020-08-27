@@ -32,9 +32,13 @@
                                      </h3>
 
                                         
-                                           
-                                    
-                                      <h2> <a href="{{route('getvoucher',['Auth::user()->id']}}">Print Processing Fee Voucher</a> </h2>
+                                    <form method="post" action="{{url('voucher')}}" >
+                                    @csrf
+                                            <input type="hidden" name="formno" value="{{Auth::user()->id}}">
+                                             <input type="submit" id="" class="form-control buttn btn-success" value="Print Processing Fee Voucher">
+                                    </form>
+                                 
+                                      
                                   
                             </div>
                         

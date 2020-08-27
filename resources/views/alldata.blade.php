@@ -45,7 +45,7 @@
 
                       @foreach($users as $user)
                       <tr>
-                          <td>{{$user->student_id}}</td>
+                          <td>{{$user->formno}}</td>
                           <td>{{$user->student_name}}</td>
                           <td>{{$user->created_at}}</td>
                           <td>{{$user->present_mobile}}</td>
@@ -53,7 +53,7 @@
                 
                           <td>{{$user->program1}}</td>
                       
-                          <td><a href="/allviewdata/{{$user->student_id}}" class="btn btn-primary">view</a>
+                          <td><a href="/allviewdata/{{$user->formno}}" class="btn btn-primary">view</a>
                         
                       </tr>
                

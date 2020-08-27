@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator,Redirect,Response;
 use App\Student_Programs;
-
+use App\Student_Basicinfo;
 use App\User;
 use App\Semester;
 use App\Program;
@@ -58,8 +58,8 @@ class ProgramsController extends Controller
             $studentprograms->program3 = $request['program3'];
           
             $studentprograms->save();
-
-            return view('OnlineApply.academic');
+            return redirect()->route('st_academics');
+           
      
 
     

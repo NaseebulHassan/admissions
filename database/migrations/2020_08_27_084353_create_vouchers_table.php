@@ -16,8 +16,6 @@ class CreateVouchersTable extends Migration
         Schema::create('vouchers', function (Blueprint $table) {
             $table->increments('vchno');
             $table->integer('formno');
-            $table->integer('program_id');
-            $table->integer('semester_d');
             $table->timestamps();
         });
         DB::statement("ALTER TABLE vouchers AUTO_INCREMENT = 20001;");

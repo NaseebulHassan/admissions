@@ -8,6 +8,7 @@ use App\User;
 use App\Student_Basicinfo;
 use App\Student_Programs;
 use App\Student_Academic;
+use App\Voucher;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -36,14 +37,19 @@ class HomeController extends Controller
         return view('home');
     } 
 
-    public function Voucher(Request $request, $id){
+    public function Voucher( Request $request){
 
-       
+                    dd($rquest);
+                $voucher = new Voucher;
+            
+                $voucher->formno = $request['formno'];
+                $basic_info->save();
+
            
-            $basicinfos=Student_Basicinfo::where('formno','=',$id)->first();
-           $programs=Student_Programs::where('formno','=',$id)->first();
-           $academics=Student_Academic::where('formno','=',$id)->first();   
-            return view('feevoucher',compact('basicinfos','programs','academics'));
+             /*   $basicinfos=Student_Basicinfo::where('formno','=',$formno)->first();
+                $programs=Student_Programs::where('formno','=',$formno)->first();
+                $academics=Student_Academic::where('formno','=',$formno)->first();  */ 
+                 return view('feevoucher');
             
         
        

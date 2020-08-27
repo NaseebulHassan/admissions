@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html >
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet"  href="css/bootstrap.css">
@@ -20,22 +20,22 @@
       <tbody>
         <tr bordercolor="#FFFFFF">
           <td width="44%">Account's Copy</td>
-          <td width="56%"><div align="right"><img border="0" src="http://sic.iuic.net.pk/apply%20online/images/header.gif" width="244" height="54" /></div></td>
+          <td width="56%"><div align="right"><img border="0" src="images/header.gif" width="244" height="54" /></div></td>
         </tr>
         <tr>
           <td colspan="2" bgcolor="#C0C0C0"><strong>Students</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Application Form Code</td>
-          <td>2004241</td>
+          <td>{{$basicinfos->formno}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Applicant Name</td>
-          <td>Test</td>
+          <td>{{$basicinfos->student_name}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Father's Name:</td>
-          <td>test</td>
+          <td>{{$basicinfos->father_name}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> CG. Rec. #</td>

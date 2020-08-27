@@ -4,7 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student_Academic;
+use App\Student_Programs;
+use App\Student_Basicinfo;
 use App\User;
+use App\Semester;
+use App\Program;
+
 
 
 class AcademicController extends Controller
@@ -15,7 +20,10 @@ class AcademicController extends Controller
         return view('OnlineApply.academic',compact('users'));
     }
     public function Complete(){
-        return view('OnlineApply.viewdata');
+        
+        $users=User::all();
+        return view('OnlineApply.viewdata',compact('users'));
+        
     }
 
 
@@ -45,7 +53,7 @@ class AcademicController extends Controller
         Student_Academic::insert($records);
           
             
-        return view('OnlineApply.viewdata')->with('message', 'submitted successfully');
+        return redirect()->route('applied');
     
     }
 }

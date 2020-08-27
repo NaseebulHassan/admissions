@@ -28,7 +28,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('\App\Student_Academic', 'formno', 'id');
     }
-
+    public function vouchers()
+    {
+        return $this->hasMany('\App\Voucher', 'formno', 'id');
+    }
     function uploaddoc(){
 
         return $this->hasMany('App\Upload','formno');
