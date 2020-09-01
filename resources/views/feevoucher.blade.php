@@ -38,23 +38,23 @@
           <td>{{$basicinfos->father_name}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
-          <td> CG. Rec. #</td>
-          <td><strong>OAS - 7081</strong></td>
+          <td> Voucher #</td>
+          <td><strong>{{$vouchers->vchno}}</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF" bgcolor="#003366">
-          <td colspan="2">Programme Applied</td>
+        <td colspan="2" bgcolor="#C0C0C0"><strong>Programme Applied</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF" bgcolor="#FFFFFF">
-          <td>  Option1</td>
-          <td>BS(AI)</td>
+          <td> Program</td>
+          <td>{{$programs->studentprogram->name}}</td>    
         </tr>
         <tr bordercolor="#FFFFFF">
           <td>  Date</td>
-          <td><strong>8/27/2020</strong></td>
+          <td><strong>{{$basicinfos->created_at}}</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Semester</td>
-          <td><strong>FALL-20</strong></td>
+          <td><strong>{{$programs->semester}}</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td colspan="2"><table width="100%" border="1" bordercolor="#000000">
@@ -64,10 +64,10 @@
               </tr>
               <tr>
                 <td width="63%">Application Processing Fee</td>
-                <td width="37%"><div align="right"><strong>RS. <strong>1500</strong>/-</strong></div></td>
+                <td width="37%"><div align="right"><strong>{{$programss->process_fee}}</strong></div></td>
               </tr>
               <tr>
-                <td colspan="2" bgcolor="#C0C0C0"><div align="right"> Payable till 28th-AUG-2020</div></td>
+                <td colspan="2" bgcolor="#C0C0C0"><div align="right"> Payable till {{$programss->payable_date}}</div></td>
               </tr>
             </tbody>
           </table></td>
@@ -106,44 +106,44 @@
     </table></td>
     <td> </td>
     <td><table width="100%" border="0" bordercolor="#000000">
-      <tbody>
+    <tbody>
         <tr bordercolor="#FFFFFF">
           <td width="44%">Bank's Copy</td>
-          <td width="56%"><div align="right"><img border="0" src="http://sic.iuic.net.pk/apply%20online/images/header.gif" width="244" height="54" /></div></td>
+          <td width="56%"><div align="right"><img border="0" src="images/header.gif" width="244" height="54" /></div></td>
         </tr>
         <tr>
           <td colspan="2" bgcolor="#C0C0C0"><strong>Students</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Application Form Code</td>
-          <td>2004241</td>
+          <td>{{$basicinfos->formno}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Applicant Name</td>
-          <td>Test</td>
+          <td>{{$basicinfos->student_name}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Father's Name:</td>
-          <td>test</td>
+          <td>{{$basicinfos->father_name}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
-          <td> CG. Rec. #</td>
-          <td><strong>OAS - 7081</strong></td>
+          <td> Voucher #</td>
+          <td><strong>{{$vouchers->vchno}}</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF" bgcolor="#003366">
-          <td colspan="2">Programme Applied</td>
+        <td colspan="2" bgcolor="#C0C0C0"><strong>Programme Applied</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF" bgcolor="#FFFFFF">
-          <td>  Option1</td>
-          <td>BS(AI)</td>
+          <td> Program</td>
+          <td>{{$programss->code}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
-          <td> Date</td>
-          <td><strong>8/27/2020</strong></td>
+          <td>  Date</td>
+          <td><strong>{{$basicinfos->created_at}}</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Semester</td>
-          <td><strong>FALL-20</strong></td>
+          <td><strong>{{$programs->semester}}</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td colspan="2"><table width="100%" border="1" bordercolor="#000000">
@@ -153,10 +153,10 @@
               </tr>
               <tr>
                 <td width="63%">Application Processing Fee</td>
-                <td width="37%"><div align="right"><strong>RS. <strong>1500</strong>/-</strong></div></td>
+                <td width="37%"><div align="right"><strong>{{$programss->process_fee}}</strong></div></td>
               </tr>
               <tr>
-                <td colspan="2" bgcolor="#C0C0C0"><div align="right"> Payable till 28th-AUG-2020</div></td>
+                <td colspan="2" bgcolor="#C0C0C0"><div align="right"> Payable till {{$programss->payable_date}}</div></td>
               </tr>
             </tbody>
           </table></td>
@@ -195,44 +195,44 @@
     </table></td>
     <td> </td>
     <td><table width="100%" border="0" bordercolor="#000000">
-      <tbody>
+    <tbody>
         <tr bordercolor="#FFFFFF">
           <td width="44%">Student's Copy</td>
-          <td width="56%"><div align="right"><img border="0" src="http://sic.iuic.net.pk/apply%20online/images/header.gif" width="244" height="54" /></div></td>
+          <td width="56%"><div align="right"><img border="0" src="images/header.gif" width="244" height="54" /></div></td>
         </tr>
         <tr>
           <td colspan="2" bgcolor="#C0C0C0"><strong>Students</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Application Form Code</td>
-          <td>2004241</td>
+          <td>{{$basicinfos->formno}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Applicant Name</td>
-          <td>Test</td>
+          <td>{{$basicinfos->student_name}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Father's Name:</td>
-          <td>test</td>
+          <td>{{$basicinfos->father_name}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
-          <td> CG. Rec. #</td>
-          <td><strong>OAS - 7081</strong></td>
+          <td> Voucher #</td>
+          <td><strong>{{$vouchers->vchno}}</strong></td>
         </tr>
-        <tr bordercolor="#FFFFFF" bgcolor="#003366">
-          <td colspan="2">Programme Applied</td>
+        <tr bordercolor="#FFFFFF" >
+          <td colspan="2" bgcolor="#C0C0C0"><strong>Programme Applied</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF" bgcolor="#FFFFFF">
-          <td>  Option1</td>
-          <td>BS(AI)</td>
+          <td> Program</td>
+          <td>{{$programss->code}}</td>
         </tr>
         <tr bordercolor="#FFFFFF">
-          <td> Date</td>
-          <td><strong>8/27/2020</strong></td>
+          <td>  Date</td>
+          <td><strong>{{$basicinfos->created_at}}</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td> Semester</td>
-          <td><strong>FALL-20</strong></td>
+          <td><strong>{{$programs->semester}}</strong></td>
         </tr>
         <tr bordercolor="#FFFFFF">
           <td colspan="2"><table width="100%" border="1" bordercolor="#000000">
@@ -242,10 +242,10 @@
               </tr>
               <tr>
                 <td width="63%">Application Processing Fee</td>
-                <td width="37%"><div align="right"><strong>RS. <strong>1500</strong>/-</strong></div></td>
+                <td width="37%"><div align="right"><strong>{{$programss->process_fee}}</strong></div></td>
               </tr>
               <tr>
-                <td colspan="2" bgcolor="#C0C0C0"><div align="right"> Payable till 28th-AUG-2020</div></td>
+                <td colspan="2" bgcolor="#C0C0C0"><div align="right"> Payable till {{$programss->payable_date}}</div></td>
               </tr>
             </tbody>
           </table></td>

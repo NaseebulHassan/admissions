@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use App\Student_Programs;
 class Program extends Model
 {
-    public function programs()
+    public function studentprogram()
     {
-        return $this->hasMany('\App\Student_Programs', 'program1', 'code');
+        return $this->belongsTo('\App\Student_Programs','program1');
+       
     }
     protected $fillable = [
         'code', 'name', 'process_fee','payable_date',

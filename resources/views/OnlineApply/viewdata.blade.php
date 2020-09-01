@@ -31,7 +31,7 @@
                                        Email:  admissions@iqraisb.edu.pk
                                      </h3>
 
-                                        <a href="/voucherUP">Print Processing Fee Voucher</a>
+                                        <a href="/voucherUP/{{Auth::user()->id}}">Print Processing Fee Voucher</a>
                                       
                                   
                             </div>

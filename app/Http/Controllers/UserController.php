@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Student_Academic;
 use App\Student_Programs;
 use App\Student_Basicinfo;
+use App\Program;
 use Illuminate\Http\Request;
 use App\User;
 use App\Voucher;
+use DB;
 
 class UserController extends Controller
 {
@@ -18,18 +20,20 @@ class UserController extends Controller
     }
 
 
-    public function Voucher(){
+    public function Voucher(Request $request , $id){
 
         $voucher = new Voucher();
     
-        // $voucher->formno = $request['formno'];
-        // $basic_info->save();
+        $voucher->formno = $request['id'];
+         $voucher->save();
 
    
-      $basicinfos=Student_Basicinfo::where('formno','=',$formno)->first();
-        $programs=Student_Programs::where('formno','=',$formno)->first();
-        $academics=Student_Academic::where('formno','=',$formno)->first();  
-         return view('feevoucher', compact('basicinfos', 'programs', 'academics'));
+        $basicinfos=Student_Basicinfo::where('formno','=',$id)->first();
+        
+        $programs=Student_Programs::where('formno','=',$id)->first();
+       //dd($programs);
+        $vouchers=Voucher::where('formno','=',$id)->first(); 
+         return view('feevoucher', compact('basicinfos', 'programs', 'vouchers'));
     
 
 

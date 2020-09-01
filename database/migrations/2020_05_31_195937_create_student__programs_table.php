@@ -34,9 +34,9 @@ class CreateStudentProgramsTable extends Migration
             $table->string('how_did_come')->nullable();
             $table->string('student_status');
             $table->string('semester');
-            $table->string('program1');
-            $table->string('program2')->nullable();
-            $table->string('program3')->nullable();
+            $table->integer('program1');
+            $table->integer('program2')->nullable();
+            $table->integer('program3')->nullable();
             $table->timestamps();
         });
     }

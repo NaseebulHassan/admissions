@@ -17,11 +17,16 @@ class Student_Programs extends Model
     public function program1(){
         return $this->belongsTo('\App\User','id');
     }
-    public function program3(){
-        return $this->belongsTo('\App\Program','code');
+
+    public function studentprogram(){
+        return $this->hasMany('\App\Program','id');
+       
+   
     }
+
     public function semester(){
-        return $this->belongsTo('\App\semester','session');
+        
+        return $this->hasMany('\App\semester','session');
     }
    
     protected $fillable = [
