@@ -15,7 +15,7 @@
 
   <div class="col-md-12">
             
-                <img src="images/header.jpg" width="100%" height="250" alt="">
+                <img src="{{asset('images/header.jpg')}}" width="100%" height="250" alt="">
            
             
        </div>

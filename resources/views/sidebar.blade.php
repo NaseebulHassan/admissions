@@ -13,18 +13,13 @@
    
 </head>
 <body>
-<div class="container">
+<div class="sidebar">
  <!--------Content start------->
-<div class="row">
-     <!--------Header  start------->
-    
-
-
-<!-------- Login Model Form------>
-            <div class="col-md-12">
-    <div class="justify-content-md-around">
-        <img src="images/header.jpg" width="100%" height="50" alt="">
+ <div class="justify-content-md-around">
+        <img src="images/logo.png" width="100%" height="50" alt="">
     </div>
+    Form No : &nbsp;{{Auth::user()->id}}
+  
     <div class="topnav nav" id="myTopnav">
  <!---   @if (Route::has('login'))
                     <div class="top-right links">
@@ -38,34 +33,24 @@
                             @endif
                         @endauth
                     </div>
-                @endif
+                @endif--->
             <a href="{{ url('Student_program')}}"><i class="fa fa-fw fa-user"></i>Step_2</a>
             <a href="{{ url('Student_academics')}}"><i class="fa fa-fw fa-user"></i>Step_3</a>
             <a href="{{ url('upload')}}"><i class="fa fa-fw fa-file"></i>Upload Documents</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
-            </a>--->
-            <div style="float:right; margin-left:600px">
+            </a>
+            <div style="">
 
             <a href="#"><i class="fa fa-user fa-fw"></i> {{ Auth::user()->name }} </a>   
         
    
-                <a href="{{ route('logout') }}"onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}</a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                              <i class="fa fa-bars"></i>
-                            </a>
-                                </form>
+                
             </div>
            
            
-            
-    </div>
-
-    </div>   </div>   </div>
+      </div>
+      </div>
 
 
 
@@ -75,16 +60,7 @@
 
 
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+
 <script src="{{ asset('/js/script.js') }}"></script>
 
 

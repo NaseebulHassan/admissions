@@ -237,12 +237,7 @@
                 Program 2.
                 <select name="program2" id="select4"  class="col-md-6" style="padding:10px" >
                 <option value="">N/A</option>
-                    @foreach($programs as $program)
-
-                      <option value="{{$program->id}}">{{$program->name}}</option>
-                            
-
-                      @endforeach
+                    @include('OnlineApply.programs')
                 </select>
         </div>
         <div class="col-md-12">
@@ -250,12 +245,7 @@
                 Program 3.
                 <select name="program3" id="select4" class="col-md-6" style="padding:10px">
                 <option value="">N/A</option>
-                    @foreach($programs as $program)
-
-                          <option value="{{$program->id}}">{{$program->name}}</option>
-
-
-                      @endforeach
+                @include('OnlineApply.programs')
                 </select>
         </div>
       </div>

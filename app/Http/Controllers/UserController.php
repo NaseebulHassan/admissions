@@ -31,8 +31,9 @@ class UserController extends Controller
         $basicinfos=Student_Basicinfo::where('formno','=',$id)->first();
         
         $programs=Student_Programs::where('formno','=',$id)->first();
-       //dd($programs);
-        $vouchers=Voucher::where('formno','=',$id)->first(); 
+       
+        $vouchers=Voucher::where('formno','=',$id)->first();
+       // dd($vouchers); 
          return view('feevoucher', compact('basicinfos', 'programs', 'vouchers'));
     
 

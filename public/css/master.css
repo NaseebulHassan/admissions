@@ -1,18 +1,22 @@
 form{
     border:solid #2D2A83;
     margin:20px 0px 30px 0px;
-    background-color:#3A698A;
-    color: white;
+    background-color:white;
+    color: rgb(20, 10, 10);
     padding:20px;
-  }  
+  } 
+  form label{
+    font-weight: bold;
+  } 
   input{
     margin-left:50px;
   }
   form h2{
-    background-color:#27297D;
+    background-color:#07579C;
     width:100%;
-    text-align:center;
-    padding:20px;
+    padding:10px;
+    color: white;
+    border-radius: 0.3em;
   }
   form h3{
       text-align:left;
@@ -20,4 +24,20 @@ form{
   .buttn{
     background-color:#27297D;
     
+  }
+  .wrapp{
+    width: 100%;
+    height: auto;
+  
+ 
+  }
+  .sidebar{
+    width: 250px;
+    padding-bottom: 800px;
+    float: left;
+    position: fixed;
+  }
+  .frm{
+    margin-left: 255px;
+    float: left;
   }

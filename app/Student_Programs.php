@@ -19,9 +19,12 @@ class Student_Programs extends Model
     }
 
     public function studentprogram(){
-        return $this->hasMany('\App\Program','id');
-       
-   
+        return $this->belongsTo('\App\Program','program1');
+    
+    }
+    public function allstudent(){
+        return $this->belongsTo('\App\Program','program1');
+    
     }
 
     public function semester(){

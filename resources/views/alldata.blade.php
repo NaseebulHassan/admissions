@@ -51,7 +51,7 @@
                           <td>{{$user->present_mobile}}</td>
                           <td>{{$user->student_email}}</td>
                 
-                          <td>{{$user->program1}}</td>
+                          <td>{{$user->code}}</td>
                       
                           <td><a href="/allviewdata/{{$user->formno}}" class="btn btn-primary">view</a>
                         

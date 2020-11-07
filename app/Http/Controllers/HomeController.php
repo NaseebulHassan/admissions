@@ -8,6 +8,7 @@ use App\User;
 use App\Student_Basicinfo;
 use App\Student_Programs;
 use App\Student_Academic;
+use App\Program;
 use App\Voucher;
 use Illuminate\Support\Facades\Auth;
 
@@ -42,8 +43,9 @@ class HomeController extends Controller
     public function getdata()
     {
   
-       $users=User::join('Student__Basicinfos','Student__Basicinfos.formno','=','users.id')
+      $users=User::join('Student__Basicinfos','Student__Basicinfos.formno','=','users.id')
        ->join('Student__Programs','Student__Programs.formno','=','users.id')
+       ->join('programs','Student__Programs.program1','=','programs.id')
       ->orderBy('Student__Basicinfos.formno','DESC')
        ->paginate(2);
         return view('alldata',compact('users'));

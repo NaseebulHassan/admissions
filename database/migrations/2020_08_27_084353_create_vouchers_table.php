@@ -18,7 +18,7 @@ class CreateVouchersTable extends Migration
             $table->integer('formno');
             $table->timestamps();
         });
-        DB::statement("ALTER TABLE vouchers AUTO_INCREMENT = 20001;");
+        DB::statement("ALTER TABLE vouchers AUTO_INCREMENT = 2020200;");
     }
 
     /**

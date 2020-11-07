@@ -102,8 +102,6 @@
             </div>
        
         <!-------Domicile Information End------>
-      <hr>
-
       <!-------Dob Information Start------>
       <div class="row "><br>
             
@@ -144,51 +142,35 @@
         <!-------Tel (Res) (*)  Information start------>
        
         <div class="row "><br>
-        <div class="col-md-12">
-          <h3>Present Address of Applicant :</h3>
-          <label for="">Address  :</label>
-             {{$basicinfos->present_address}}
-        </div>
+       
             <div class="col-md-6">
+            <h3>Present Address of Applicant :</h3>
+            <label for="">Address  :</label>
+             {{$basicinfos->present_address}} <br>
               <label for="">Tel (Res)  :</label>
               {{$basicinfos->present_tel}}
             <br>
-            
-            </div>
-            <div class="col-md-6">
-              <label for="">Mobile Phone :</label>
+            <label for="">Mobile Phone :</label>
               {{$basicinfos->present_mobile}}
-              <br>
-            
             </div>
+
+            <div class="col-md-6">
+            <h3>Permanant Address of Applicant :</h3>
+          <label for="">Address  </label>
+          {{$basicinfos->permanent_address}} <br>
+          <label for="">Tel (Res) : </label>
+              {{$basicinfos->perm_tel}}
+              <br>
+              <label for="">Mobile Phone  :</label>
+              {{$basicinfos->perm_mobile}}
+
+          </div>
+           
         </div>
    
  <!-------Permanant Address Information start------>
   
 
-        <hr>
-        <!-------Tel (Res) (*)  Information start------>
-       
-        <div class="row "><br>
-        <div class="col-md-12">
-          <h3>Permanant Address of Applicant :</h3>
-          <label for="">Address  </label>
-          {{$basicinfos->permanent_address}}
-        </div>
-        
-            <div class="col-md-6">
-              <label for="">Tel (Res) : </label>
-              {{$basicinfos->perm_tel}}
-              <br>
-            
-            </div>
-            <div class="col-md-6">
-              <label for="">Mobile Phone  :</label>
-              {{$basicinfos->perm_mobile}}
-             <br>
-            
-            </div>
-        </div>
         <!-------Tel (Res) (*)  Information End------>
 <hr>
 
@@ -204,7 +186,45 @@
 
           <hr>
         <!-------Father's/Guardian's Information start------>
-        
+       
+      
+        <!-------Applicant's Information start------>
+      
+        <div class="row "><br>
+          <div class="col-md-12">
+            <h3>Applicant's Information:</h3>
+          </div>
+            <div class="col-md-6">
+              <label for="" style="text-align:left;">Applicant's Designation (if employed) :</label>
+              {{$basicinfos->applicant_designation}}
+              
+            </div>
+            <div class="col-md-6">
+              <label for="">Name of the Organization:</label>
+              {{$basicinfos->organisation_name}}
+             <br>
+              
+            </div>
+        </div>
+        <div class="row "><br>
+            
+            <div class="col-md-4">
+              <label for="">Disability (if any): </label>
+              {{$basicinfos->disability}}
+             <br>
+            
+            </div>
+            <div class="col-md-8">
+              <label for="">Special arrangements required for the admission test and to attend classes at the campus :</label>
+              {{$basicinfos->special_arrangement}}
+              <br>
+            
+            </div>
+            
+        </div>
+        <hr>
+        <!-------Applicant's Information End------>
+ 
         <div class="row "><br>
           <div class="col-md-12">
             <h3>Father's/Guardian's Information:</h3>
@@ -246,44 +266,6 @@
 
         <!-------Father's/Guardian's Information End------>
 
-        <hr>
-        <!-------Applicant's Information start------>
-      
-        <div class="row "><br>
-          <div class="col-md-12">
-            <h3>Applicant's Information:</h3>
-          </div>
-            <div class="col-md-6">
-              <label for="" style="text-align:left;">Applicant's Designation (if employed) :</label>
-              {{$basicinfos->applicant_designation}}
-              
-            </div>
-            <div class="col-md-6">
-              <label for="">Name of the Organization:</label>
-              {{$basicinfos->organisation_name}}
-             <br>
-              
-            </div>
-        </div>
-        <div class="row "><br>
-            
-            <div class="col-md-4">
-              <label for="">Disability (if any): </label>
-              {{$basicinfos->disability}}
-             <br>
-            
-            </div>
-            <div class="col-md-8">
-              <label for="">Special arrangements required for the admission test and to attend classes at the campus :</label>
-              {{$basicinfos->special_arrangement}}
-              <br>
-            
-            </div>
-            
-        </div>
-
-        <!-------Applicant's Information End------>
-
 
         <hr>
         <!-------Emergency Case Information:start------>
@@ -321,60 +303,7 @@
         </div>
         <!-------Emergency Case Information: End------>
 
-      <br><br><br><br><br><br><br><br><br>
-          
-       <h3>Acdemice Record:</h3>
-        <table class="table">
-          <thead>
-            <TR>
-              <th>Qualification</th>
-              <th>Board_university</th>
-              <th>Year</th>
-              <th>Division</th>
-              <th>Grade</th>
-              <th>Obtain_marks</th>
-              <th>Total_marks</th>
-            </TR>
-          </thead>
-          <tbody>
-
-          @foreach($academics as $row)
-            <tr>
-              <td>{{$row->qualification}}</td>
-              <td>{{$row->board_university}}</td>
-              <td>{{$row->year}}</td>
-              <td>{{$row->division}}</td>
-              <td>{{$row->grade}}</td>
-              <td>{{$row->obtain_marks}}</td>
-              <td>{{$row->total_marks}}</td>
-             
-              
-            </tr>
-          @endforeach
-          </tbody>
-        </table>
-                
-            <hr>
- 
-            <div class="row">
-              <div class="col-md-12">
-                 <h3>Iqra Graduates/Ex-Students:</h3>
-              </div>
-                <div class="col-md-6">
-                      
-                      <label for="" style="text-align:left;">Campus :</label>
-                      {{$programs->campus}}<br>
-                      <label for="">Registration no :</label>
-                      {{$programs->registration_no}}<br>
-                </div>
-                <div class="col-md-6">
-                      <label for="">Program :</label>
-                      {{$programs->pre_program}}<br>
-                      <label for="">Reason for leaving :</label>
-                      {{$programs->reason_leaving}}
-                </div>
-            </div>
-           
+      <br><br><br>
       <hr>
         <div class="row ">
               <div class="col-md-12">
@@ -447,19 +376,13 @@
         <!-------Disciplinary Issues (in Previous Institution: End------>
      
 
-        <hr>
-        <div class="row ">
-              <div class="col-md-12">
-                <h3>How did you come to know about Iqra University Islamabd Campus? :</h3><br>
-                {{$programs->how_did_come}}<br>
-              </div>
-          </div>
+       
            <!----me to know about Iqra University Islamabd Campus? End------>
       <hr>
           <div class="row ">
               <div class="col-md-12">
-                <h3>Applicant's Status:</h3><br>
-                {{$programs->student_status}}<br>
+                <h3>Applicant's Status:</h3>
+                {{$programs->student_status}}
               </div>
           </div>
 <hr>
@@ -471,7 +394,7 @@
             <div class="col-md-6">
                    
                   <label for="">Program 1 :</label>
-                  {{$programs->program1}}<br>
+                  {{$programs->allstudent->code}}<br>
                   <label for="">Program 2 :</label>
                   {{$programs->program2}}<br>
                   
@@ -483,10 +406,110 @@
             </div>
             
       </div>
-<hr>
+      <hr>
+ 
+<!---- <div class="row">
+   <div class="col-md-12">
+      <h3>Iqra Graduates/Ex-Students:</h3>
+   </div>
+     <div class="col-md-6">
+           
+           <label for="" style="text-align:left;">Campus :</label>
+           {{$programs->campus}}<br>
+           <label for="">Registration no :</label>
+           {{$programs->registration_no}}<br>
+     </div>
+     <div class="col-md-6">
+           <label for="">Program :</label>
+           {{$programs->pre_program}}<br>
+           <label for="">Reason for leaving :</label>
+           {{$programs->reason_leaving}}
+     </div>
+ </div>
 
+----->
 
+      
+<h3>Acdemice Record:</h3>
+        <table class="table">
+          <thead>
+            <TR>
+              <th>Qualification</th>
+              <th>Board University</th>
+              <th>Year</th>
+              <th>Division</th>
+              <th>Grade</th>
+              <th>Obtain_marks</th>
+              <th>Total_marks</th>
+            </TR>
+          </thead>
+          <tbody>
 
+          @foreach($academics as $row)
+            <tr>
+              <td>{{$row->qualification}}</td>
+              <td>{{$row->board_university}}</td>
+              <td>{{$row->year}}</td>
+              <td>{{$row->division}}</td>
+              <td>{{$row->grade}}</td>
+              <td>{{$row->obtain_marks}}</td>
+              <td>{{$row->total_marks}}</td>
+             
+              
+            </tr>
+          @endforeach
+          </tbody>
+        </table>
+               <hr>
+
+               <div class="row">
+                  <div class="col-md-12">
+                  I Understand that the information provided is correct to the best of my knowledge and that any incorrect information provided by me may lead to the cancellation of my admission at IQRA University.
+                  </div>
+                  <div class="offset-10">
+                  <br>
+                     _______________________
+                      Student  Signature's
+                  </div>
+               </div> 
+
+               <hr>
+
+              <div class="row">
+                    <div class="col-md-12">
+                        <h3>For Office Use Only</h3>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="row">
+
+                            <div class="col-md-4">
+                                1.Status of Application <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="col-md-4">
+                                2. Admission Denied <input type="checkbox" name="" id="">
+                            </div>
+                            <div class="col-md-4">
+                                3. Admission Pending <input type="checkbox" name="" id="">
+                            </div>
+                      </div>
+                    </div>
+                </div> 
+           
+                <hr>
+
+               <div class="row">
+                  <div class="col-md-12">
+                <strong>  Chairman of the Admission Committee: </strong><br><br>
+                  Name: ________________________ <br><br>
+                  Date:   ________________________
+                  </div>
+                  <div class="offset-10">
+                  <br>
+                     _______________________
+                       Signature
+                  </div>
+               </div> 
+<br><br>
   </div>
 
   </div>   
