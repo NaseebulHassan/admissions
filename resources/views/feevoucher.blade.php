@@ -69,7 +69,7 @@
                         <td width="37%"><div align="right"><strong>{{$programs->studentprogram->process_fee}}</strong></div></td>
                       </tr>
                       <tr>
-                        <td colspan="2" bgcolor="#C0C0C0"><div align="right"><strong> Payable till :</strong>{{$programs->studentprogram->payable_date}}</div></td>
+                        <td colspan="2" bgcolor="#C0C0C0"><div align="right"><strong> Payable till :</strong>{{$programs->semesters->payable_date}}</div></td>
                       </tr>
                     </tbody>
                   </table></td>
@@ -159,7 +159,7 @@
                         <td width="37%"><div align="right"><strong>{{$programs->studentprogram->process_fee}}</strong></div></td>
                       </tr>
                       <tr>
-                        <td colspan="2" bgcolor="#C0C0C0"><div align="right"><strong> Payable till :</strong>{{$programs->studentprogram->payable_date}}</div></td>
+                        <td colspan="2" bgcolor="#C0C0C0"><div align="right"><strong> Payable till :</strong>{{$programs->semesters->payable_date}}</div></td>
                       </tr>
                     </tbody>
                   </table></td>
@@ -248,7 +248,7 @@
                         <td width="37%"><div align="right"><strong>{{$programs->studentprogram->process_fee}}</strong></div></td>
                       </tr>
                       <tr>
-                        <td colspan="2" bgcolor="#C0C0C0"><div align="right"><strong> Payable till :</strong>{{$programs->studentprogram->payable_date}}</div></td>
+                        <td colspan="2" bgcolor="#C0C0C0"><div align="right"><strong> Payable till :</strong>{{$programs->semesters->payable_date}}</div></td>
                       </tr>
                     </tbody>
                   </table></td>

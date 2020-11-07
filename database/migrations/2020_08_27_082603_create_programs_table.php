@@ -18,7 +18,6 @@ class CreateProgramsTable extends Migration
             $table->string('code');
             $table->string('name');
             $table->string('process_fee');
-            $table->date('payable_date');
             $table->timestamps();
         });
     }

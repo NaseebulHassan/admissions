@@ -214,7 +214,7 @@
         
         <div class="col-md-12">
           @foreach($semesters as $semester)
-            <input type="hidden" name="semester" class="hidden" value="{{$semester->session}}"> 
+            <input type="hidden" name="semester" class="hidden" value="{{$semester->id}}"> 
           @endforeach
                 <h4 >**Applicant can apply for 3 different Programs** </h4>
                 * Program 1.

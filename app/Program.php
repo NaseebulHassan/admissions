@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Student_Programs;
+use App\Semester;
 class Program extends Model
 {
     public function studentprogram(){
@@ -12,6 +13,10 @@ class Program extends Model
     }
     public function allstudent(){
         return $this->hasMany('\App\Student_Programs','id');
+    
+    }
+    public function semesters(){
+        return $this->blongTo('\App\Semester','id');
     
     }
   

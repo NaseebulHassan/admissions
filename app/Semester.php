@@ -9,9 +9,10 @@ class Semester extends Model
 
     function StudentBasicinfo(){
 
-        return $this->hasMany('App\Student_Programs', 'semester', 'session');
+        return $this->hasMany('App\Student_Programs', 'semester', 'id');
         
     }
+  
 
     protected $fillable = [
         'session',

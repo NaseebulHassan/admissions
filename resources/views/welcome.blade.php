@@ -29,8 +29,8 @@
      
                     <div class="col-md-12">
                              <marquee behavior="" direction="">
-                               <h2>Admissions Open FALL-2020</h2>
-                                
+                               <h2>Admissions Open SPRING-2020 </h2>
+                                <h2>Last date for Apply 20 December, 2020</h2>
                                </marquee>
                     </div>
                         <div class="col-md-12">

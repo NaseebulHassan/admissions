@@ -10,6 +10,7 @@ class Voucher extends Model
     public function program(){
         return $this->belongsTo('\App\Voucher','formno');
     }
+    
 
     protected $fillable = [
         'formno',

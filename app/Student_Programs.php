@@ -27,9 +27,9 @@ class Student_Programs extends Model
     
     }
 
-    public function semester(){
+    public function semesters(){
         
-        return $this->hasMany('\App\semester','session');
+        return $this->belongsTo('\App\semester','semester');
     }
    
     protected $fillable = [
