@@ -23,7 +23,7 @@
 <!-------- Login Model Form------>
             <div class="col-md-12">
     <div class="justify-content-md-around">
-        <img src="images/header.jpg" width="100%" height="50" alt="">
+        <img src="images/header.jpg" width="100%" height="250" alt="">
     </div>
     <div class="topnav nav" id="myTopnav">
  <!---   @if (Route::has('login'))

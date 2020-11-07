@@ -23,8 +23,8 @@
 
  <!--------Content start------->
 
- <div class="wrapp ">
- @include("sidebar")
+ <div class="container">
+ @include("header2")
  <!--------Content start------->
 @if(count($errors)>0)
     <div class="alert alert-danger">
@@ -34,7 +34,7 @@
     @endforeach
     </div>
 @endif
-        <div class="frm">
+        <div class="ffssrm">
                 <!--
             <!-------- Login Model Form------>
             <div class="col-md-12">
@@ -179,19 +179,17 @@
 
                     <hr>
                     <!-------Applicant's Information start------>
-                    <div class="col-md-12">
-                      <h3>Applicant's Information:</h3>
-                    </div>
+                  
                     <div class="row "><br>
                         
                         <div class="col-md-6">
                           <label for="" style="text-align:left;">Applicant's Designation (if employed)</label>
-                          <input type="text" class="form-control" name="applicant_designation" placeholder="Enter Applicant's Designation"  value="{{ old('applicant_designation')?old('applicant_designation'): '' }}"><br>
+                          <input type="text" class="form-control" name="applicant_designation"   value="{{ old('applicant_designation')?old('applicant_designation'): '' }}"><br>
                           
                         </div>
                         <div class="col-md-6">
                           <label for="">Name of the Organization</label>
-                          <input type="text" class="form-control" name="organisation_name" placeholder="Enter Name of the Organization"  value="{{ old('organisation_name')?old('organisation_name'): '' }}"><br>
+                          <input type="text" class="form-control" name="organisation_name"   value="{{ old('organisation_name')?old('organisation_name'): '' }}"><br>
                           
                         </div>
                     </div>
@@ -199,12 +197,12 @@
                         
                         <div class="col-md-4">
                           <label for="">Disability (if any) </label>
-                          <input type="text" class="form-control" name="disability" placeholder="Enter Disability " value="{{ old('disability')?old('disability'): '' }}" ><br>
+                          <input type="text" class="form-control" name="disability"  value="{{ old('disability')?old('disability'): '' }}" ><br>
                         
                         </div>
                         <div class="col-md-8">
                           <label for="">Special arrangements  for the admission test and to attend classes at the campus</label>
-                          <input type="text" class="form-control" name="special_arrangement" placeholder="Enter Special arrangements  for the admission"  value="{{ old('special_arrangement')?old('special_arrangement'): '' }}"><br>
+                          <input type="text" class="form-control" name="special_arrangement"   value="{{ old('special_arrangement')?old('special_arrangement'): '' }}"><br>
                         
                         </div>
                         
@@ -215,30 +213,50 @@
 
                     <hr>
                     <!-------Emergency Case Information:start------>
-                    <div class="col-md-12">
-                      <h3>Emergency Case Information:</h3>
-                    </div>
-                    <div class="row "><br>
+                    
+                      <h2>Emergency Contact</h2>
+                
+                    <div class="row ">
                         
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                           <label for="" style="text-align:left;">Name</label>
-                          <input type="text" class="form-control" name="emergency_name" placeholder="Enter Name" value="{{ old('emergency_name')?old('emergency_name'): '' }}"><br>
-                          <label for="">Telephone No:</label>
-                          <input type="text" class="form-control" name="em_telephone" id="em_telephone" placeholder="Enter Telephone No"  maxlength="11" value="{{ old('em_telephone')?old('em_telephone'): '' }}"><br>
+                          <input type="text" class="form-control" name="emergency_name"  value="{{ old('emergency_name')?old('emergency_name'): '' }}"><br>
+                         
+                        </div>
+                        <div class="col-md-3">
+                          <label for="">Relationship </label>
+                          
+                            <select name="relation_applicant" class="form-control" id="">
+                              <option value="">--Select--</option>
+                              <option value="Father">Father</option>
+                              <option value="Mother">Mother</option>
+                              <option value="Brother">Brother</option>
+                              <option value="Sister">Sister</option>
+                              <option value="Wife">Wife</option>
+                              <option value="Son">Son</option>
+                              <option value="Daughter">Daughter</option>
+                              <option value="Mother in Law">Mother in Law</option>
+                              <option value="Father in Law">Father in Law</option>
+                              <option value="Friend">Friend</option>
+                            </select>
                           
                         </div>
-                        <div class="col-md-6">
-                          <label for="">Relationship with the Applicant</label>
-                          <input type="text" class="form-control" name="relation_applicant" placeholder="Enter Relationship with the Applicant" value="{{ old('relation_applicant')?old('relation_applicant'): '' }}"><br>
-                          <label for="">Mobile No:</label>
-                          <input type="text" class="form-control" name="em_mobile" id="em_mobile" placeholder="Enter Mobile No" maxlength="12" value="{{ old('em_mobile')?old('em_mobile'): '' }}"><br>
+                        <div class="col-md-3">
+                          
+                          <label for="">Telephone No:</label>
+                          <input type="text" class="form-control" name="em_telephone" id="em_telephone"  maxlength="11" value="{{ old('em_telephone')?old('em_telephone'): '' }}"><br>
+                          
+                        </div>
+                        <div class="col-md-3">
+                        <label for="">Mobile No:</label>
+                          <input type="text" class="form-control" name="em_mobile" id="em_mobile"  maxlength="12" value="{{ old('em_mobile')?old('em_mobile'): '' }}"><br>
                           
                         </div>
                     </div>
                     <div class="row">
                       <div class="col-md-12">
                           <label for="">Address</label>
-                          <input type="text" class="form-control" name="em_address" placeholder="Enter Address" value="{{ old('em_address')?old('em_address'): '' }}"><br>
+                          <input type="text" class="form-control" name="em_address"  value="{{ old('em_address')?old('em_address'): '' }}"><br>
                           
                         </div>
                     </div>
