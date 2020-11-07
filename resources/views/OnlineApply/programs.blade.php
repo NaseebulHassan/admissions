@@ -26,5 +26,5 @@
                         <option value="MSc(IR)">Master of Science in International Relations MSc(IR)</option>
                         <option value="MPhil(DS)">MPHIL in international Development Studies (MPHIL(IDS))</option>
                         <option value="MPhil(IR)">MPHIL in international Relations (MPHIL(IR))</option>
-                        <option value="" selected="">Select the Program </option>
+                        <option value="" selected="">--Select Program-- </option>
                    

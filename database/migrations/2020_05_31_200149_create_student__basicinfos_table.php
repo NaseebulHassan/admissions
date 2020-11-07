@@ -34,14 +34,11 @@ class CreateStudentBasicinfosTable extends Migration
             $table->string('present_tel');
             $table->string('present_mobile');
             $table->string('permanent_address')->nullable();
-            $table->string('perm_tel')->nullable();
-            $table->string('perm_mobile')->nullable();
             $table->string('student_email');
             $table->string('father_occupation')->nullable();
             $table->string('fbusiness_address')->nullable();
             $table->string('father_tel')->nullable();
             $table->string('father_mobile')->nullable();
-            $table->string('father_email')->nullable();
             $table->string('applicant_designation')->nullable();
             $table->string('organisation_name')->nullable();
             $table->string('disability')->nullable();

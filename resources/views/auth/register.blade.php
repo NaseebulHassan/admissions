@@ -16,14 +16,14 @@
         <div class="row ">
                 @include('header')
             <div class="col-md-12" >
-                <div class="container">
+                <div class="contai55ner">
                     <div class="row justify-content-center">
                             
                         <div class="col-md-12">
                             <div class="card">
-                                <div class="card-header" style="background-color:#303283; color:white">{{ __('Register for Iqra Univesity Islamabad Online Admissions') }}</div>
+                                <div class="card-header" style="background-color:#303283; color:white;text-align:center">{{ __('Register for Online Admission at Iqra Univesity Islamabad ') }}</div>
 
-                                <div class="card-body" style="background-color:#416F98; color:white">
+                                <div class="card-body" style="background-color:white; color:black">
                                     
                                     <div class="row">
                                         <div class="col-md-7">
@@ -81,7 +81,7 @@
                                                         </div>
 
                                                         <div class="form-group row mb-0">
-                                                            <div class="col-md-6 offset-md-4">
+                                                            <div class="col-md-10 offset-md-4">
                                                                 <button type="submit" class="btn btn-primary">
                                                                     {{ __('Register') }}
                                                                 </button>

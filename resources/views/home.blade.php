@@ -42,7 +42,7 @@
 
               <form class="col-md-12" id="basicinfo" method="POST" action="{{ url('studentinfo')}}">
                   @csrf
-                    <h2 class="col-ms-12">Personal Details</h2> 
+                    <h2 class="col-ms-12">Personal Details  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2> 
                   <hr>
                     <!-------Personal Information start------>
                   
@@ -75,7 +75,7 @@
                                 <option value="AJ&K">Azad Jammu & Kashmir</option>
                               </select>
                           
-                              <label for="">* Telphone (Res) </label>
+                              <label for="">* Telphone  </label>
                           <input type="text" class="form-control" name="present_tel" id="present_tel" maxlength="11"  value="{{ old('present_tel')?old('present_tel'): '' }}" required>
                           
                           

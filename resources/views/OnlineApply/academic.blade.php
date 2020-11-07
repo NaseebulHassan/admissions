@@ -33,30 +33,22 @@
 <div class="col-md-12">
       <form  method="POST" action="{{route('formsubmitted')}}" class="col-md-12">
       @csrf
-        <h2 class="col-ms-12">IUIC Online Application form   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Step-3 </h2> 
+        <h2 class="col-ms-12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Academic Info   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Form No : &nbsp;{{Auth::user()->id}} </h2> 
       <hr>
     <hr>
        <div class="row">
             <div class="col-md-12">
-                <div class="col-md-12">
-                    <div class="row">
-                            <div class="col-md-12">
-                            <h5 style="background-color:#27297D;padding:10px;text-align:center">Academic Record:</h5>
-                            </div>
-                           
-                     </div>
-           
-                </div><br>
+              
                 <div class="col-md-4">
-                <div style="background-color:#2E2F81; padding:5px" class="col-sm-8">
-                      Form No : &nbsp;{{Auth::user()->id}}
+                <div  class="col-sm-8">
+                   
                       <input type="hidden" name="row[0][student_id]" class="hidden" value="{{Auth::user()->id}}"> 
                           </div> 
                 </div>   <br>
-             <table class="table table-bordered table-responsive" style="color:white">
+             <table class="table table-bordered table-responsive" >
                 <thead>
                     <tr>
-                        <th  >QUALIFICATION</th>
+                        <th>QUALIFICATION</th>
                         <th >BOARD/UNIVERSITY</th>
                         <th >YEAR</th>
                         <th >DIVISION</th>
@@ -68,8 +60,8 @@
                 <tbody>
                     <tr>
                        
-                        <td class="col-md-2">
-                            <select style="padding:5px" name="row[0][qualification]" class="col-md-10 form-control division" required>
+                        <td class="col-md-1">
+                            <select  name="row[0][qualification]" class="form-control " required>
                                      @include("OnlineApply.firstlist")
                             </select>
                         </td>
@@ -113,7 +105,7 @@
                     <tr>
                         
                         <td>
-                            <select style="padding:5px" name="row[1][qualification]" class="col-md-10 division form-control" required>
+                            <select style="padding:5px" name="row[1][qualification]" class="form-control" required>
                                      @include("OnlineApply.secondlist")
                             </select>
                         </td>
@@ -157,7 +149,7 @@
                     <tr>
                         
                         <td>
-                            <select style="padding:5px" name="row[2][qualification]" class="col-md-10 division form-control">
+                            <select style="padding:5px" name="row[2][qualification]" class=" form-control">
                                 @include("OnlineApply.thirdlist")
 
                             </select>
@@ -202,7 +194,7 @@
                     <tr>
                         
                         <td>
-                            <select style="padding:5px" name="row[3][qualification]" class="col-md-10 division form-control">
+                            <select style="padding:5px" name="row[3][qualification]" class=" form-control">
                                  @include("OnlineApply.fourthlist")
                             </select>
                         </td>

@@ -39,13 +39,12 @@
                         @endauth
                     </div>
                 @endif
-            <a href="{{ url('Student_program')}}"><i class="fa fa-fw fa-user"></i>Step_2</a>
-            <a href="{{ url('Student_academics')}}"><i class="fa fa-fw fa-user"></i>Step_3</a>
-            <a href="{{ url('upload')}}"><i class="fa fa-fw fa-file"></i>Upload Documents</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>--->
-            <div style="float:right; margin-left:600px">
+                  <a href="{{ url('upload')}}"><i class="fa fa-fw fa-file"></i>Upload Documents</a>
+            <a href="{{ url('Student_program')}}"><i class="fa fa-fw fa-user"></i>Program Detail</a>
+            <a href="{{ url('Student_academics')}}"><i class="fa fa-fw fa-user"></i>Acadmic Info</a>
+          
+            --->
+            <div style="float:right; margin-left:800px">
 
             <a href="#"><i class="fa fa-user fa-fw"></i> {{ Auth::user()->name }} </a>   
         

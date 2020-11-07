@@ -38,8 +38,6 @@ class BasicinfoController extends Controller
            'present_mobile' => 'required',
            'student_email' => 'required|email',
            'permanent_address'=> 'required',
-                   'perm_tel'=> 'required',
-               'perm_mobile'=> 'required',
            ]);    
         // $this->validate($request, );
         if ($validate->fails()) {
@@ -66,14 +64,11 @@ class BasicinfoController extends Controller
             $basic_info->present_tel = $request['present_tel'];
             $basic_info->present_mobile = $request['present_mobile'];
             $basic_info->permanent_address = $request['permanent_address'];
-            $basic_info->perm_tel = $request['perm_tel'];
-            $basic_info->perm_mobile = $request['perm_mobile'];
             $basic_info->student_email = $request['student_email'];
             $basic_info->father_occupation = $request['father_occupation'];
             $basic_info->fbusiness_address = $request['fbusiness_address'];
             $basic_info->father_tel = $request['father_tel'];
             $basic_info->father_mobile = $request['father_mobile'];
-            $basic_info->father_email = $request['father_email'];
             $basic_info->applicant_designation = $request['applicant_designation'];
             $basic_info->disability = $request['disability'];
             $basic_info->special_arrangement = $request['special_arrangement'];

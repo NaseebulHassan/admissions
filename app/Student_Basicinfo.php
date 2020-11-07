@@ -42,8 +42,6 @@ class Student_Basicinfo extends Model
         'present_tel',
         'present_mobile',
         'permanent_address',
-        'perm_tel',
-        'perm_mobile',
         'student_email',
 
     ];

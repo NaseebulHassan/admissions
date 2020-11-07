@@ -25,16 +25,16 @@
             <p class="text-alert">{{ $error }}</p>
          @endforeach 
             <div class="col-md-12" >
-                <div class="container">
+                <div class="contain55er">
                     <div class="row justify-content-center">
                 
-                        <div class="col-md-10">
+                        <div class="col-md-12">
                             <div class="card">
-                                <div class="card-header" style="background-color:#303283; color:white">{{ __('User Login') }}</div>
+                                <div class="card-header" style="background-color:#303283; color:white;text-align:center">{{ __('User Login') }}</div>
 
-                                    <div class="card-body" style="background-color:#416F98; color:white">
+                                    <div class="card-body" style="background-color:white; color:black">
                                        
-                                                <form method="POST" action="{{ route('login') }}" class="col-md-10">
+                                                <form method="POST" action="{{ route('login') }}" class="col-md-6 offset-md-2">
                                                             @csrf
                                                         
                                                             <div class="form-group row">
