@@ -42,7 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 
-Route::get('/clear/route', 'ConfigController@clearRoute');
+
 /* -----------Uploads Document---------*/
 Route::get('upload', 'UploadController@index')->name('upload');
 Route::post('/uploaded', 'UploadController@store')->name('uploaded');
