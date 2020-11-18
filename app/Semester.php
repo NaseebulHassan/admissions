@@ -7,9 +7,9 @@ use App\Student_Programs;
 class Semester extends Model
 {
 
-    function StudentBasicinfo(){
+    function semesters(){
 
-        return $this->hasMany('App\Student_Programs', 'semester', 'id');
+        return $this->hasMany('App\Student_Programs','id');
         
     }
   

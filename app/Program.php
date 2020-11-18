@@ -15,11 +15,7 @@ class Program extends Model
         return $this->hasMany('\App\Student_Programs','id');
     
     }
-    public function semesters(){
-        return $this->blongTo('\App\Semester','id');
-    
-    }
-  
+   
     protected $fillable = [
         'code', 'name', 'process_fee','payable_date',
     ];

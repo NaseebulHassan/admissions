@@ -29,9 +29,9 @@ class Student_Programs extends Model
 
     public function semesters(){
         
-        return $this->belongsTo('\App\semester','semester');
+        return $this->belongsTo('\App\Semester','semester');
     }
-   
+
     protected $fillable = [
        'formno', 'student_status','semester','program1',
     ];

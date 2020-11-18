@@ -304,7 +304,7 @@
         <!-------Emergency Case Information: End------>
 
       <br><br><br>
-      <hr>
+      <hr><br>
         <div class="row ">
               <div class="col-md-12">
                 <h3>Transfer Applicant:</h3>

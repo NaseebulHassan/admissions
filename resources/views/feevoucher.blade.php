@@ -56,7 +56,7 @@
                 </tr>
                 <tr bordercolor="#FFFFFF">
                   <td> Semester</td>
-                  <td><strong>{{$programs->semester}}</strong></td>
+                  <td><strong>{{$programs->semesters->session}}</strong></td>
                 </tr>
                 <tr bordercolor="#FFFFFF">
                   <td colspan="2"><table width="100%" border="1" bordercolor="#000000">
